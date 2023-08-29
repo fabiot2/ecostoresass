@@ -20,12 +20,13 @@ $text-size: 1.6rem;
 
 html {
     font-size: 62.5%;
-    font-family: $font-stack;
 }
 
 body {
     font-size: 1.6rem;
     line-height: 1.6em;
+    background-color: $primary-color;
+    font-family: $font-stack;
 }
 
 .template__container {
@@ -63,21 +64,27 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
 
-.site__logo {
-    color: $primary-text-color;
-    font-size: 3.2rem;
-    font-weight: bold;
-    text-decoration: none;
-}
+    .site__logo {
+        color: $primary-text-color;
+        font-size: 3.2rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
 
-.menu__container {
-    height: 40px;
-}
- 
-main {
-    background-color: $primary-color;
+    button {
+        width: 3.2rem;
+        height: 3.2rem;
+        border: none;
+        background-color: $tertiary-color;
+        border-radius: 100%;
+        margin-left: 12px;
+        
+        svg {
+            fill: $primary-text-color;
+        }
+    }
+
 }
 
 .hero {

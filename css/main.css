@@ -11,12 +11,13 @@
 
 html {
   font-size: 62.5%;
-  font-family: "IBM Plex Sans", sans-serif;
 }
 
 body {
   font-size: 1.6rem;
   line-height: 1.6em;
+  background-color: #FFEFE7;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .template__container {
@@ -56,20 +57,22 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
-.site__logo {
+.header__container .site__logo {
   color: #7C6A0A;
   font-size: 3.2rem;
   font-weight: bold;
   text-decoration: none;
 }
-
-.menu__container {
-  height: 40px;
+.header__container button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: none;
+  background-color: #BABD8D;
+  border-radius: 100%;
+  margin-left: 12px;
 }
-
-main {
-  background-color: #FFEFE7;
+.header__container button svg {
+  fill: #7C6A0A;
 }
 
 .hero {
