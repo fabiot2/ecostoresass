@@ -1,6 +1,7 @@
 $primary-color: #FFEFE7;
 $secondary-color: #FFDAC6;
 $tertiary-color: #BABD8D;
+$quaternion-color: #FA9500;
 $primary-text-color: #7C6A0A;
 $secondary-text-color: #141410;
 $background:#FA9500;
@@ -45,6 +46,7 @@ body {
     min-width: 30rem;
 }
 
+
 .button__primary {
     padding: 1.2rem 1.8rem;
     min-height: 4.4rem;
@@ -63,7 +65,7 @@ body {
     display: flex;
     position: sticky;
     top: 0;
-    background: rgba(255, 218, 198, 0);
+    background: #ffefe7dc;
     border-radius: 0 0 0 20px;
     backdrop-filter: blur(7.3px);
     -webkit-backdrop-filter: blur(7.3px);
@@ -97,7 +99,7 @@ body {
 
 .hero {
     width: 100%;
-    height: 90vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
@@ -112,7 +114,8 @@ body {
     &__content {
         display: flex;
         flex-direction: column;
-        max-width: 48rem;
+        width: 38rem;
+
         align-self: flex-end;
         justify-self: flex-start;
 
@@ -133,13 +136,15 @@ body {
             margin-block-start: 2rem;
         }
     }
-
-    &__img {
-        width: 400px;
+    &__figure--img {
+        max-width: 60rem;
         min-width: 30rem;
-        min-height: 40rem;
-        background-color: red;
-    }
+        object-fit: cover;
+        object-position: bottom;
+        height: 40rem;
+        border-radius: 1.8rem;
+   }
+
 }
 
 .store__features {
@@ -226,6 +231,8 @@ body {
 
 .aboutus {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     &__card {
         display: flex;
