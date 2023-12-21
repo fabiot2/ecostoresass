@@ -1,0 +1,14 @@
+@mixin grilla ($width:100%, $max-width:132rem, $margin: 0 auto, $padding: 0 2rem) {
+    width: $width;
+    max-width: $max-width;
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin flexcontainer ($display:flex, $flex-wrap:wrap, $flex-direction:row, $justify-content:space-between, $align-items:center) {
+    display: $display;
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

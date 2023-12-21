@@ -1,20 +1,37 @@
-// Configuración Global y reseteo
+// Global config and reset
 @import 'globales';
+@import 'mixings';
 
-//Elementos 
+//Elements 
 @import 'navbar';
 @import 'products';
 @import 'footer';
 
+//flex
+//display:flex;
+//width: 100%;
+//max-width: 132rem;
+//margin: 0 auto;
+//padding: 0 2rem;
+//flex-wrap: wrap;
+//flex-direction:row;
+//justify-content: space-between;
+//align-items: center;
+
+
+.wrapper {
+    @include grilla;
+}
 
 .hero__section {
     margin-block-start: 7.5rem;
     color: $primary-text-color;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
-    align-items: center;
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 2rem;
+    // justify-content: space-between;
+    // align-items: center;
+    @include flexcontainer;
     
     .hero__info {
         min-width: 32rem;
@@ -25,10 +42,6 @@
     .hero__title {
         font-size: 6rem;
         margin-block-end: 6rem;
-    }
-
-    .hero__text {
-
     }
 
     .hero__cta {
@@ -64,10 +77,7 @@
     margin-block-end: 23rem;
 
     .wrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        @include flexcontainer;
         gap: 4rem 2rem;
     }
 
@@ -82,11 +92,12 @@
     &--card {
         max-width: 53.2rem;
         margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // align-items: center;
+        @include flexcontainer;
         gap: 0.8rem;
     }
 
@@ -109,14 +120,15 @@
         h2 {
             font-size: 5rem;
             line-height: 6.5rem;
-            margin-block-end: 15rem;
+            margin-block-end: 4rem;
             font-weight: 400;
         }
 
         .gallery__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        @include flexcontainer;
         gap: 2rem;
 
 
@@ -144,6 +156,7 @@
     img {
         margin-block: 6.7rem 5rem;
         height: 59rem;
+        max-width: 100%;
     }
 
     .location__name {
@@ -162,4 +175,3 @@
 
 
 }
-
