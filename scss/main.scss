@@ -1,80 +1,11 @@
-$primary-color:#FFEFE7;
-$secundary-color: #ffdac6;
-$tertiary-color: #BABD8D;
-$primary-text-color:#7C6A0A;
-$primary-orange:#FA9500;
-$font-stack: 'IBM Plex Sans' , sans-serif; 
+// Configuración Global y reseteo
+@import 'globales';
 
-*, *::after, *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+//Elementos 
+@import 'navbar';
+@import 'products';
+@import 'footer';
 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    font-size: 2.4rem;
-    background-color: $primary-color;
-    font-family: $font-stack;
-    color:$primary-text-color;
-    min-width: 32rem;
-}
-
-.wrapper {
-    width: 100%;
-    max-width: 132rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.navbar {
-
-    .wrapper {
-        height: 13.5rem;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-
-    &__logo {
-        color: $primary-text-color;
-        font-size: 3rem;
-        font-weight: 700;
-    }
-
-    &__right {
-        display: flex;
-        gap: 1.2rem;
-    }
-
-    &__button {
-        background: none ;
-        border: none;
-        
-        svg {
-            width: 5rem;
-            height: 5rem;
-            stroke: $primary-text-color;
-        }
-
-    }
-
-}
 
 .hero__section {
     margin-block-start: 7.5rem;
@@ -84,36 +15,32 @@ body {
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
-    // justify-content: space-between;
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
     
     .hero__info {
         min-width: 32rem;
         max-width: 60rem;
         color: $primary-text-color;
+    }
 
-        .hero__title {
-            font-size: 6rem;
-            margin-block-end: 6rem;
-        }
+    .hero__title {
+        font-size: 6rem;
+        margin-block-end: 6rem;
+    }
 
-        .hero__text {
+    .hero__text {
 
-        }
+    }
 
-        .hero__cta {
-            width: 26rem;
-            height: 7.2rem;
-            font-size: 2.4rem;
-            font-weight: bold;
-            border: none;
-            border-radius: 3.2rem;
-            margin-block-start: 10.9rem;
-            background-color: $primary-orange;
-            color: $primary-color;
-        }
-
+    .hero__cta {
+        width: 26rem;
+        height: 7.2rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 3.2rem;
+        margin-block-start: 10.9rem;
+        background-color: $primary-orange;
+        color: $primary-color;
     }
 
     .hero__media {
@@ -133,118 +60,7 @@ body {
     }
 }
 
-.products__section {
-    margin-block: 13rem 8rem;
-
-    .main__products--title {
-        font-size: 5rem;
-        line-height: 6.5rem;
-        font-weight: 400;
-        color: $primary-text-color;
-    }
-
-    .main__products--container {
-        margin-block: 6rem 7.3rem;
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(auto-fill, 32rem);
-        gap: 7.5rem 2rem;
-        justify-content: space-between;
-
-        .products__card {
-            position: relative;
-            max-width: 32rem;
-            min-width: 13rem;
-            min-height: 55rem;
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            border-radius: 0.8rem;
-            background-color: $secundary-color;
-    
-
-            .products__icon-wishlist {
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-                width: 2.8rem;
-                height: auto;
-                stroke:$primary-text-color;
-            }
-
-            figure {
-                width: 100%;
-                height: 30rem;
-            }
-
-            .products__img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                border-radius: 0.8rem;
-            }
-
-
-
-            .products__info  {
-                margin-block-start: 1.6rem;
-                height: 9rem;
-                overflow: hidden;
-
-                .products__title {
-                    font-size: 2.5rem;
-                    font-weight: 600;
-                    line-height: 3.3rem;
-                    color: $primary-text-color;
-                }
-
-                .products__text {
-                    font-size: 1.5rem;
-                    font-weight: 400;
-                    line-height: 19.5px;
-                    color: $primary-text-color;
-                }
-
-            }
-
-            .products__cta {
-                width: 100%;
-                height: 4rem;
-                margin-block-start: 2rem;
-                font-weight: bold;
-                font-size: 1.6rem;
-                background-color: $primary-orange;
-                color: $primary-color;
-                border: none;
-                border-radius: 2.8rem;
-            }
-
-        }
-
-        .products__card--home {
-            background-color: $tertiary-color;
-
-            .products__icon-wishlist, .products__cta {
-                stroke: $primary-color;
-                color: $primary-color;
-            }
-
-            .products__info {
-
-                .products__title, .products__text {
-                    color: $primary-color;
-                }
-            }
-
-        }
-
-    }
-
-}
-
-.about__us--container {
+.about__us {
     margin-block-end: 23rem;
 
     .wrapper {
@@ -253,38 +69,38 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 4rem 2rem;
+    }
 
-        .about__us--title {
-            width: 100%;
-            font-size: 5rem;
-            line-height: 6.5rem;
-            margin-block-end: 15rem;
-            font-weight: 400;
-        }
-        
-        .about__us--card {
-            max-width: 53.2rem;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 0.8rem;
+    &--title {
+        width: 100%;
+        font-size: 5rem;
+        line-height: 6.5rem;
+        margin-block-end: 1rem;
+        font-weight: 400;
+    }
+    
+    &--card {
+        max-width: 53.2rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
 
-            .about__us--img {
-                width: 16.4rem;
-                height: 16.4rem;
-            }
+    &--img {
+        width: 16.4rem;
+        height: 16.4rem;
+    }
 
-            .about__us--text {
-                font-size: 2.9rem;
-                line-height: 3.9rem;
-                text-align: center;
-                color: #e86424;
-                max-width: 36rem;
-            }
-        }
+    &--text {
+        font-size: 2.9rem;
+        line-height: 3.9rem;
+        text-align: center;
+        color: #e86424;
+        max-width: 36rem;
     }
 }
 
@@ -297,22 +113,7 @@ body {
             font-weight: 400;
         }
 
-    // .gallery__container {
-    //     display: grid;
-    //     grid-template-columns: repeat(auto-fill, 39.6rem);
-    //     justify-content: space-between;
-    //     gap: 2rem;
-
-    //     img {
-    //         width: 39.6rem;
-    //         height: 39.6rem;
-    //         object-fit: cover;
-    //         object-position: center;
-    //         border-radius: 1.6rem;
-    //     }
-    // }
-
-    .gallery__container {
+        .gallery__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -362,42 +163,3 @@ body {
 
 }
 
-.footer {
-    background-color: $primary-orange;
-    width: 100%;
-    color: $primary-color;
-    height: 46.1rem;
-    padding: 4.2rem 0;
-
-    .footer__title {
-        margin-block-end: 3.6rem;
-    }
-
-    .footer__menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-    
-        a {
-            color: $primary-color;
-        }
-
-        .footer__menu--social  {
-            margin-block-start: 9rem;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 3rem;
-    
-            .footer__item {
-                width: 4.3rem;
-                height: 4.3rem;
-            }     
-        }
-       
-    }
-
-
-
-}
