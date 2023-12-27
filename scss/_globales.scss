@@ -3,7 +3,9 @@ $secundary-color: #ffdac6;
 $tertiary-color: #BABD8D;
 $primary-text-color:#7C6A0A;
 $primary-orange:#FA9500;
-$font-stack: 'IBM Plex Sans' , sans-serif; 
+$font-stack: 'IBM Plex Sans' , sans-serif;
+$query-tablet: 1200px;
+$query-mobile: 800px; 
 
 *, *::after, *::before {
     margin: 0;

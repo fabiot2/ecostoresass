@@ -28,15 +28,30 @@
     color: $primary-text-color;
     // display: flex;
     // flex-wrap: wrap;
-    // gap: 2rem;
     // justify-content: space-between;
     // align-items: center;
     @include flexcontainer;
+    gap: 2rem;
+    flex-wrap: nowrap;
+
+    @media screen and (max-width: $query-mobile) {
+        flex-wrap: wrap;
+        margin-block-start: 0;
+    }
     
     .hero__info {
         min-width: 32rem;
         max-width: 60rem;
         color: $primary-text-color;
+        
+        @media screen and (max-width: $query-tablet) {
+            max-width: 50%;
+        }
+
+        @media screen and (max-width: $query-mobile) {
+            max-width: 100%;
+            order: 1;
+        }
     }
 
     .hero__title {
@@ -63,8 +78,12 @@
         height: 68.6rem;
         text-align: right;
 
+        @media screen and (max-width: $query-mobile) {
+            width: 100%;
+            order: 0;
+        }
+
         img {
-            
         width: 100%;
         height: 100%;
         border-radius: 2rem;
@@ -75,6 +94,9 @@
 
 .about__us {
     margin-block-end: 23rem;
+    @media screen and (max-width:$query-tablet) {
+        margin-block-end: 12rem;
+    }
 
     .wrapper {
         @include flexcontainer;
@@ -98,7 +120,17 @@
         // justify-content: center;
         // align-items: center;
         @include flexcontainer;
+        align-items: flex-start;
         gap: 0.8rem;
+
+        @media screen and (max-width: $query-tablet) {
+            max-width: 45%;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: $query-mobile) {
+            max-width: 100%;
+        }
     }
 
     &--img {
@@ -112,6 +144,7 @@
         text-align: center;
         color: #e86424;
         max-width: 36rem;
+        min-height: 16rem;
     }
 }
 
@@ -157,6 +190,7 @@
         margin-block: 6.7rem 5rem;
         height: 59rem;
         max-width: 100%;
+        object-fit: cover;
     }
 
     .location__name {
@@ -172,6 +206,4 @@
         font-weight: 400;
         color: $primary-orange;
     }
-
-
 }
